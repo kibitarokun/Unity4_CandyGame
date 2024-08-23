@@ -58,6 +58,8 @@ public class Shooter : MonoBehaviour
     //その位置を決めている
     Vector3 GetInstantiatePosition()
     {
+
+        //Input.mousePosition.x →　Gameビュー上のマウスのX座標
         float xx = Input.mousePosition.x;
         Debug.Log(xx);
 
@@ -101,7 +103,8 @@ public class Shooter : MonoBehaviour
         //Candyのストックを消費
         candyManager.ConsumeCandy();
 
-        ConsumePower();
+        //ショットできるパワーも1消費
+        ConsumePower();　
 
         shotSound.Play(); //AudioSourceに設置されているAudioClipを再生する
     }
